@@ -1,0 +1,46 @@
+.pic-rent, .pic-food, .pic-souvenir, .pic-gluh, .pic-gluh-hvr, .pic-acad, .pic-acad-hvr{
+	background: url(sprites.png) no-repeat;
+}
+
+.pic-rent{
+	background-position: 0 0;
+	width: 75px;
+	height: 72px;
+}
+
+.pic-food{
+	background-position: -150px 0;
+	width: 74px;
+	height: 70px;
+}
+
+.pic-souvenir{
+	background-position: -300px 0;
+	width: 64px;
+	height: 76px;
+}
+
+.pic-gluh{
+	background-position: 0 -100px ;
+	width: 27px;
+	height: 30px;
+}
+
+.pic-gluh-hvr{
+	background-position: -100px -100px ;
+	width: 27px;
+	height: 30px;
+}
+
+.pic-acad{
+	background-position: -50px -100px ;
+	width: 26px;
+	height: 33px;
+}
+
+.pic-acad-hvr{
+	background-position: -150px -100px ;
+	width: 27px;
+	height: 33px;
+}
+
