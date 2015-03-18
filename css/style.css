@@ -93,6 +93,13 @@ body {
   background-color: #f2f2f2;
   text-transform: uppercase;
 }
+a {
+  text-decoration: none;
+}
+h2 {
+  margin: 0;
+  padding: 0;
+}
 .wrapper {
   max-width: 1200px;
   min-width: 768px;
@@ -366,8 +373,8 @@ body {
 }
 .search-form-container {
   position: absolute;
-  bottom: -386px;
-  /*-height for positioning form*/
+  bottom: -374px;
+  /*-height for positioning form under button*/
   display: block;
   width: 460px;
   min-height: 250px;
@@ -379,7 +386,7 @@ body {
 .search-form label {
   display: block;
   margin-bottom: 30px;
-  padding: 10px 0;
+  padding: 0;
   text-align: left;
   vertical-align: middle;
   font-size: 14px;
@@ -397,7 +404,8 @@ body {
   text-transform: uppercase;
   color: #000;
   background-color: #f2f2f2;
-  border: 2px solid #f2f2f2;
+  outline: 2px solid #f2f2f2;
+  border: none;
 }
 .search-form input::-webkit-calendar-picker-indicator {
   display: none;
@@ -405,12 +413,13 @@ body {
 }
 .search-form input:hover {
   background-color: #ebebeb;
-  border: 2px solid #ebebeb;
+  outline: 2px solid #ebebeb;
+  border: none;
 }
 .search-form input:focus {
   background-color: #fff;
-  border: 2px solid #e5e5e5;
-  outline: hidden;
+  outline: 2px solid #e5e5e5;
+  border: none;
 }
 .search-form .search-date {
   position: relative;
@@ -418,6 +427,7 @@ body {
 .search-form .search-date:before {
   content: '\e800';
   position: absolute;
+  color: #a9a9a9;
   top: 50%;
   right: 8px;
   height: 20px;
@@ -425,8 +435,13 @@ body {
   font-family: "symbols-sedona";
   font-size: 20px;
 }
-.search-date-text,
-.visiters-text {
+.search-form .search-date:hover:before {
+  color: #000;
+}
+.search-form .search-date:focus:before {
+  color: #81b3d2;
+}
+.search-date-text {
   display: inline-block;
   width: 30%;
   vertical-align: middle;
@@ -436,62 +451,90 @@ body {
   width: 70%;
   vertical-align: middle;
 }
-.search-form .search-visiters-container {
+.search-visiters-container {
   display: inline-block;
   width: 50%;
   margin: 0;
   vertical-align: top;
 }
-.search-form .search-visiters-container .visiters-text {
-  display: inline-block;
-  width: calc(100% - 90px);
+.search-visiters-container .visiters-text {
+  float: left;
+  width: 100px;
   margin-top: 10px;
   vertical-align: middle;
 }
-.search-form .search-visiters-container .control-input {
+.search-visiters-container .control-input {
   float: right;
   width: 90px;
 }
-.search-form .search-visiters-container .control-input input {
+.control-input input {
   text-align: center;
 }
-.search-form .search-visiters-container + div {
+.search-visiters-container + div {
   width: 45%;
   margin-left: 5%;
 }
-.search-form .visiters {
+.visiters {
+  width: 100%;
   position: relative;
 }
-.search-form .control {
+.control {
   position: absolute;
-  height: 38px;
+  height: 35px;
 }
-.search-form .control-button {
+.control-minus {
+  top: 0;
+  right: 60px;
+}
+.control-plus {
+  top: 0;
+  right: 0;
+}
+.control-button {
   background: none;
-  color: #a9a9a9;
   border: none;
   line-height: 2.5;
   text-align: center;
 }
-.search-form .control-minus {
-  top: 10px;
-  right: 60px;
+.icon-minus {
+  color: #a9a9a9;
 }
-.search-form .control-plus {
-  top: 10px;
-  right: 0;
+.icon-minus:hover {
+  color: #000;
 }
-.search-form .btn {
-  display: block;
+.icon-minus:active {
+  color: #81b3d2;
+}
+.icon-plus {
+  color: #a9a9a9;
+}
+.icon-plus:hover {
+  color: #000;
+}
+.icon-plus:active {
+  color: #81b3d2;
+}
+.search-form .submit {
   width: 100%;
   padding: 20px;
+}
+.btn {
+  border: 2px solid #81b3d2;
   background-color: #81b3d2;
   text-align: center;
   border: none;
   color: #fff;
   font-size: 20px;
   font-weight: bold;
+  text-decoration: none;
   text-transform: uppercase;
+}
+.btn:hover {
+  background-color: #669ec0;
+}
+.btn:active {
+  color: rgba(225, 225, 225, 0.3);
+  background-color: #5496bd;
 }
 /*End Index Main content*/
 /*Footer*/
@@ -510,10 +553,10 @@ body {
 }
 .footer-item {
   display: inline-block;
-  vertical-align: top;
   width: 30%;
   padding: 35px 0 ;
   margin-left: 5%;
+  vertical-align: top;
   text-align: center;
   text-decoration: none;
 }
@@ -530,8 +573,11 @@ body {
 }
 .social-container {
   font-size: 0;
+  /* 'f' */
+  /* 't' */
+  /* '' */
 }
-.icon:before {
+.social-container .icon:before {
   width: 46px;
   height: 50px;
   font-size: 20px;
@@ -541,22 +587,19 @@ body {
   text-align: center;
   vertical-align: middle;
 }
-.icon-facebook:before {
+.social-container .icon-facebook:before {
   content: '\66';
 }
-/* 'f' */
-.icon-twitter:before {
+.social-container .icon-twitter:before {
   content: '\74';
 }
-/* 't' */
-.icon-youtube:before {
+.social-container .icon-youtube:before {
   content: '\f39e';
 }
-/* '' */
-.icon:hover:before {
+.social-container .icon:hover:before {
   background-color: #669ec0;
 }
-.icon:active:before {
+.social-container .icon:active:before {
   color: rgba(225, 225, 225, 0.3);
   background-color: #5496bd;
 }
@@ -594,4 +637,58 @@ body {
 .copyright-by:active:after,
 .copyright-for:active:after {
   opacity: .3;
+}
+/*Hotels*/
+/*Options-block*/
+/*End Options-block*/
+/*Gallery*/
+.gallery {
+  margin-bottom: 120px;
+}
+.gallery-item {
+  min-width: 738px;
+  max-width: 1140px;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 30px;
+}
+.gallery-item-container {
+  max-width: 1050px;
+  min-width: 706px;
+  margin: 0 auto;
+}
+.gallery-item-features {
+  float: left;
+  width: 70%;
+}
+.gallery-item-image {
+  display: inline-block;
+  vertical-align: top;
+}
+.gallery-item-image img {
+  width: 135px;
+  height: 90px;
+}
+.gallery-item-descr {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 30px;
+}
+.gallery-item-descr h2 {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: bold;
+  color: #000;
+}
+.gallery-item-descr a {
+  display: inline-block;
+}
+.gallery-item-type,
+.gallery-item-minprice {
+  display: inline-block;
+  width: 110px;
+  vertical-align: bottom;
+}
+.gallery-item-rating {
+  float: right;
+  width: 20%;
 }

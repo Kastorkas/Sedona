@@ -21,92 +21,130 @@
 				</nav>
 			</header>
 			<main class="main-content">
-			<div class="container">
-				<div class="options-block">
-					<form action="/echo" method="post" >
-						<div class="form-block">
-							<h2 class="form-block-title">Инфраструктура:</h2>
-							<input type="checkbox" name="pool" checked>
-							<label>Бассейн</label>
-							<input type="checkbox" name="parking">
-							<label>Парковка</label>
-							<input type="checkbox" name="wi-fi">
-							<label>Wi-Fi</label>
-						</div>
-						<div class="form-block">
-							<h2 class="form-block-title">Тип жилья:</h2>
-							<input type="checkbox" name="hotel" checked>
-							<label>Гостиница</label>
-							<input type="checkbox" name="motel" checked>
-							<label>Мотель</label>
-							<input type="checkbox" name="appartment" checked>
-							<label>Апартаменты</label>
-						</div>
-						<div class="range-block">
-							<h2 class="form-block-title">Стоимость в сутки(р):</h2>
-							<div class="range-filter">
-								<div class="price-controls">
-									<label class="min-price" for="min-price">
-										от <input id="min-price" name="min-price" type="text" value="0">
-									</label>
-									<label class="max-price" for="max-price">
-										до <input id="max-price" name="max-price" type="text" value="3000">
-									</label>
-								</div>
-								<div class="range-controls">
-									<div class="scale">
-										<div class="bar" style="width: 70%"></div>
+				<div class="container">
+					<div class="options-block">
+						<form action="/echo" method="post" >
+							<div class="form-block">
+								<h2 class="form-block-title">Инфраструктура:</h2>
+								<input type="checkbox" name="pool" id="pool" checked>
+								<label for="pool">Бассейн</label>
+								<input type="checkbox" name="parking" id="parking">
+								<label for="parking">Парковка</label>
+								<input type="checkbox" name="wi-fi" id="wi-fi">
+								<label for="wi-fi">Wi-Fi</label>
+							</div>
+							<div class="form-block">
+								<h2 class="form-block-title">Тип жилья:</h2>
+								<input type="checkbox" name="hotel" checked>
+								<label>Гостиница</label>
+								<input type="checkbox" name="motel" checked>
+								<label>Мотель</label>
+								<input type="checkbox" name="appartment" checked>
+								<label>Апартаменты</label>
+							</div>
+							<div class="range-block">
+								<h2 class="form-block-title">Стоимость в сутки(р):</h2>
+								<div class="range-filter">
+									<div class="price-controls">
+										<label class="min-price" for="min-price">
+											от <input id="min-price" name="min-price" type="text" value="0">
+										</label>
+										<label class="max-price" for="max-price">
+											до <input id="max-price" name="max-price" type="text" value="3000">
+										</label>
 									</div>
-									<div class="toggle min-toggle"></div>
-									<div class="toggle max-toggle"></div>
+									<div class="range-controls">
+										<div class="scale">
+											<div class="bar" style="width: 70%"></div>
+										</div>
+										<div class="toggle min-toggle"></div>
+										<div class="toggle max-toggle"></div>
+									</div>
+								</div>
+								<input class="show-options btn" type="submit" value="Показать">
+							</div>
+						</form>
+					</div>
+					<section class="gallery">
+						<div class="gallery-item">
+							<div class="gallery-item-container">
+								<div class="sort-found">
+									<h3>Найдено:3</h3>
+								</div>
+								<div class="sort-options">
+									<h3 class="sort-title">Сортировать:</h3>
+									<a class="sort-type" href="#">По цене</a>
+									<a class="sort-type" href="#">По типу</a>
+									<a class="sort-type" href="#">По рейтингу</a>
+									<div class="sort-to">
+										<a class="icon-down-dir dir-active" href="#"></a>
+										<a class="icon-up-dir" href="#"></a>
+									</div>
 								</div>
 							</div>
-							<input class="show-options btn" type="submit" value="Показать">
 						</div>
-					</form>
-				</div>
-				<section class="gallery">
-					<div class="sort">
-						<div class="sort-found">
-							<h3>Найдено:3</h3>
-						</div>
-						<div class="sort-options">
-							<h3 class="sort-title">Сортировать:</h3>
-							<a class="sort-type" href="#">По цене</a>
-							<a class="sort-type" href="#">По типу</a>
-							<a class="sort-type" href="#">По рейтингу</a>
-							<div class="sort-to">
-								<a class="icon-down-dir dir-active" href="#"></a>
-								<a class="icon-up-dir" href="#"></a>
+						<div class="gallery-item">
+							<div class="gallery-item-container clearfix">
+								<div class="gallery-item-rating">
+									<div class="rating-stars"></div>
+									<div class="rating-index">Рейтинг: 8,5</div>
+								</div>
+								<div class="gallery-item-features">
+									<div class="gallery-item-image">
+										<img src="/img/img-h1.jpg" width="135" height="90" alt="Amara Resort & Spa">
+									</div
+									><div class="gallery-item-descr">
+										<h2>Amara Resort & Spa</h2>
+										<div class="gallery-item-type">Гостиница</div>
+										<div class="gallery-item-minprice">от 3500 р.</div><br/>
+										<a href="#" class="gallery-item-more btn">Подробнее</a>
+										<a href="#" class="gallery-item-book btn">Забронировать</a>
+									</div
+								></div>
 							</div>
 						</div>
-					</div>
-					<div class="gallery-item">
-						<img src="/img/img-h1.jpg" alt="Amara Resort & Spa">
-						<h2>Amara Resort & Spa</h2>
-						<div class="gallery-item-type">Гостиница</div>
-						<div class="gallery-item-min-price">от 3500 р.</div>
-						<a href="#" class="gallery-item-more btn">Подробнее</a>
-						<a href="#" class="gallery-item-book btn">Забронировать</a>
-					</div>
-					<div class="gallery-item">
-						<img src="/img/img-h2.jpg" alt="Desert Quail Inn">
-						<h2>Desert Quail Inn</h2>
-						<div class="gallery-item-type">Мотель</div>
-						<div class="gallery-item-min-price">от 2000 р.</div>
-						<a href="#" class="gallery-item-more btn">Подробнее</a>
-						<a href="#" class="gallery-item-book btn">Забронировать</a>
-					</div>
-					<div class="gallery-item">
-						<img src="/img/img-h3.jpg" alt="Villas at Poco Diablo">
-						<h2>Villas at Poco Diablo</h2>
-						<div class="gallery-item-type">Апартаменты</div>
-						<div class="gallery-item-min-price">от 4000 р.</div>
-						<a href="#" class="gallery-item-more btn">Подробнее</a>
-						<a href="#" class="gallery-item-book btn">Забронировать</a>
-					</div>
-				</section>
-			</div>
+						<div class="gallery-item">
+							<div class="gallery-item-container clearfix">
+								<div class="gallery-item-rating">
+									<div class="rating-stars"></div>
+									<div class="rating-index">Рейтинг: 8,5</div>
+								</div>
+								<div class="gallery-item-features">
+									<div class="gallery-item-content">
+										<img src="/img/img-h2.jpg" width="135" height="90" alt="Desert Quail Inn">
+									</div>
+									<div class="gallery-item-descr">
+										<h2>Desert Quail Inn</h2>
+										<div class="gallery-item-type">Мотель</div>
+										<div class="gallery-item-minprice">от 2000 р.</div>
+										<a href="#" class="gallery-item-more btn">Подробнее</a>
+										<a href="#" class="gallery-item-book btn">Забронировать</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="gallery-item">
+							<div class="gallery-item-container clearfix">
+								<div class="gallery-item-rating">
+									<div class="rating-stars"></div>
+									<div class="rating-index">Рейтинг: 8,5</div>
+								</div>
+								<div class="gallery-item-features">
+									<div class="gallery-item-image">
+										<img src="/img/img-h3.jpg" width="135" height="90" alt="Villas at Poco Diablo"/>
+									 </div
+									><div class="gallery-item-descr">
+										<h2>Villas at Poco Diablo</h2>
+										<div class="gallery-item-type">Апартаменты</div>
+										<div class="gallery-item-minprice">от 4000 р.</div>
+										<a href="#" class="gallery-item-more btn">Подробнее</a>
+										<a href="#" class="gallery-item-book btn">Забронировать</a>
+									</div
+								></div>
+							</div>
+						</div>
+					</section>
+				</div>
 			</main>
 			<footer class="main-footer">
 				<div class="footer-block">
