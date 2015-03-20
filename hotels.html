@@ -21,26 +21,26 @@
 				</nav>
 			</header>
 			<main class="main-content">
-				<div class="container">
-					<div class="options-block">
+				<div class="options-block">
+					<div class="options-block-container clearfix">
 						<form action="/echo" method="post" >
 							<div class="form-block">
 								<h2 class="form-block-title">Инфраструктура:</h2>
 								<input type="checkbox" name="pool" id="pool" checked>
-								<label for="pool">Бассейн</label>
+								<label class="form-block-item" for="pool">Бассейн</label>
 								<input type="checkbox" name="parking" id="parking">
-								<label for="parking">Парковка</label>
+								<label class="form-block-item" for="parking">Парковка</label>
 								<input type="checkbox" name="wi-fi" id="wi-fi">
-								<label for="wi-fi">Wi-Fi</label>
-							</div>
-							<div class="form-block">
+								<label class="form-block-item" for="wi-fi">Wi-Fi</label>
+							</div
+							><div class="form-block">
 								<h2 class="form-block-title">Тип жилья:</h2>
-								<input type="checkbox" name="hotel" checked>
-								<label>Гостиница</label>
-								<input type="checkbox" name="motel" checked>
-								<label>Мотель</label>
-								<input type="checkbox" name="appartment" checked>
-								<label>Апартаменты</label>
+								<input type="checkbox" name="hotel" id="hotel" checked>
+								<label class="form-block-item" for="hotel">Гостиница</label>
+								<input type="checkbox" name="motel" id="motel" checked>
+								<label class="form-block-item" for="motel">Мотель</label>
+								<input type="checkbox" name="appartment" id="appartment" checked disabled>
+								<label class="form-block-item" for="appartment">Апартаменты</label>
 							</div>
 							<div class="range-block">
 								<h2 class="form-block-title">Стоимость в сутки(р):</h2>
@@ -48,11 +48,11 @@
 									<div class="price-controls">
 										<label class="min-price" for="min-price">
 											от <input id="min-price" name="min-price" type="text" value="0">
-										</label>
-										<label class="max-price" for="max-price">
+										</label
+										><label class="max-price" for="max-price">
 											до <input id="max-price" name="max-price" type="text" value="3000">
-										</label>
-									</div>
+										</label
+									></div>
 									<div class="range-controls">
 										<div class="scale">
 											<div class="bar" style="width: 70%"></div>
@@ -61,90 +61,106 @@
 										<div class="toggle max-toggle"></div>
 									</div>
 								</div>
-								<input class="show-options btn" type="submit" value="Показать">
+								<div class="btn-wrapper">
+									<input class="show-options" type="submit" value="Показать">
+								</div>
 							</div>
 						</form>
 					</div>
-					<section class="gallery">
-						<div class="gallery-item">
-							<div class="gallery-item-container">
-								<div class="sort-found">
-									<h3>Найдено:3</h3>
-								</div>
-								<div class="sort-options">
+				</div>
+				<section class="gallery">
+					<div class="gallery-item">
+						<div class="gallery-item-container">
+							<div class="sort-options clearfix">
+								<div class="sort-types">
+									<div class="sort-found">
+										Найдено: 3
+									</div>
 									<h3 class="sort-title">Сортировать:</h3>
 									<a class="sort-type" href="#">По цене</a>
 									<a class="sort-type" href="#">По типу</a>
 									<a class="sort-type" href="#">По рейтингу</a>
-									<div class="sort-to">
-										<a class="icon-down-dir dir-active" href="#"></a>
-										<a class="icon-up-dir" href="#"></a>
-									</div>
+								</div>
+								<div class="sort-to">
+									<a class="icon-down-dir" href="#"></a>
+									<a class="icon-up-dir dir-active" href="#"></a>
 								</div>
 							</div>
 						</div>
-						<div class="gallery-item">
-							<div class="gallery-item-container clearfix">
-								<div class="gallery-item-rating">
-									<div class="rating-stars"></div>
-									<div class="rating-index">Рейтинг: 8,5</div>
+					</div>
+					<div class="gallery-item">
+						<div class="gallery-item-container clearfix">
+							<div class="gallery-item-rating">
+								<div class="rating-stars">
+									<span class="icon-star"></span>
+									<span class="icon-star"></span>
+									<span class="icon-star"></span>
+									<span class="icon-star"></span>
 								</div>
-								<div class="gallery-item-features">
-									<div class="gallery-item-image">
-										<img src="/img/img-h1.jpg" width="135" height="90" alt="Amara Resort & Spa">
-									</div
-									><div class="gallery-item-descr">
-										<h2>Amara Resort & Spa</h2>
-										<div class="gallery-item-type">Гостиница</div>
-										<div class="gallery-item-minprice">от 3500 р.</div><br/>
-										<a href="#" class="gallery-item-more btn">Подробнее</a>
-										<a href="#" class="gallery-item-book btn">Забронировать</a>
-									</div
-								></div>
+								<div class="rating-index">Рейтинг: 8,5</div>
+							</div>
+							<div class="gallery-item-features">
+								<div class="gallery-item-image">
+									<img src="img/img-h1.jpg" width="135" height="90" alt="Amara Resort & Spa">
+								</div
+								><div class="gallery-item-descr">
+									<h2>Amara Resort & Spa</h2>
+									<div class="gallery-item-type">Гостиница</div>
+									<div class="gallery-item-minprice">от 3500 р.</div><br/>
+									<a href="#" class="gallery-item-more btn">Подробнее</a>
+									<a href="#" class="gallery-item-book btn">Забронировать</a>
+								</div
+							></div>
+						</div>
+					</div>
+					<div class="gallery-item">
+						<div class="gallery-item-container clearfix">
+							<div class="gallery-item-rating">
+								<div class="rating-stars">
+									<span class="icon-star"></span>
+									<span class="icon-star"></span>
+								</div>
+								<div class="rating-index">Рейтинг: 8,5</div>
+							</div>
+							<div class="gallery-item-features">
+								<div class="gallery-item-image">
+									<img src="img/img-h2.jpg" width="135" height="90" alt="Desert Quail Inn"/>
+								</div
+								><div class="gallery-item-descr">
+									<h2>Desert Quail Inn</h2>
+									<div class="gallery-item-type">Мотель</div>
+									<div class="gallery-item-minprice">от 2000 р.</div><br/>
+									<a href="#" class="gallery-item-more btn">Подробнее</a>
+									<a href="#" class="gallery-item-book btn">Забронировать</a>
+								</div>
 							</div>
 						</div>
-						<div class="gallery-item">
-							<div class="gallery-item-container clearfix">
-								<div class="gallery-item-rating">
-									<div class="rating-stars"></div>
-									<div class="rating-index">Рейтинг: 8,5</div>
+					</div>
+					<div class="gallery-item">
+						<div class="gallery-item-container clearfix">
+							<div class="gallery-item-rating">
+								<div class="rating-stars">
+									<span class="icon-star"></span>
+									<span class="icon-star"></span>
+									<span class="icon-star"></span>
 								</div>
-								<div class="gallery-item-features">
-									<div class="gallery-item-content">
-										<img src="/img/img-h2.jpg" width="135" height="90" alt="Desert Quail Inn">
-									</div>
-									<div class="gallery-item-descr">
-										<h2>Desert Quail Inn</h2>
-										<div class="gallery-item-type">Мотель</div>
-										<div class="gallery-item-minprice">от 2000 р.</div>
-										<a href="#" class="gallery-item-more btn">Подробнее</a>
-										<a href="#" class="gallery-item-book btn">Забронировать</a>
-									</div>
-								</div>
+								<div class="rating-index">Рейтинг: 8,5</div>
 							</div>
+							<div class="gallery-item-features">
+								<div class="gallery-item-image">
+									<img src="img/img-h3.jpg" width="135" height="90" alt="Villas at Poco Diablo"/>
+								 </div
+								><div class="gallery-item-descr">
+									<h2>Villas at Poco Diablo</h2>
+								<div class="gallery-item-type">Апартаменты</div>
+									<div class="gallery-item-minprice">от 4000 р.</div><br/>
+									<a href="#" class="gallery-item-more btn">Подробнее</a>
+									<a href="#" class="gallery-item-book btn">Забронировать</a>
+								</div
+							></div>
 						</div>
-						<div class="gallery-item">
-							<div class="gallery-item-container clearfix">
-								<div class="gallery-item-rating">
-									<div class="rating-stars"></div>
-									<div class="rating-index">Рейтинг: 8,5</div>
-								</div>
-								<div class="gallery-item-features">
-									<div class="gallery-item-image">
-										<img src="/img/img-h3.jpg" width="135" height="90" alt="Villas at Poco Diablo"/>
-									 </div
-									><div class="gallery-item-descr">
-										<h2>Villas at Poco Diablo</h2>
-										<div class="gallery-item-type">Апартаменты</div>
-										<div class="gallery-item-minprice">от 4000 р.</div>
-										<a href="#" class="gallery-item-more btn">Подробнее</a>
-										<a href="#" class="gallery-item-book btn">Забронировать</a>
-									</div
-								></div>
-							</div>
-						</div>
-					</section>
-				</div>
+					</div>
+				</section>
 			</main>
 			<footer class="main-footer">
 				<div class="footer-block">

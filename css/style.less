@@ -119,6 +119,7 @@ h2 {
 }
 .main-menu a {
 	display: block;
+	font-weight: bold;
 	color: #000;
 	text-decoration: none;
 }
@@ -683,15 +684,303 @@ h2 {
 .copyright-for:active:after {
 	opacity: .3;
 }
-/*Hotels*/
 
 /*Options-block*/
+.options-block {
+	padding: 30px;
+	background-image: url(../img/img-bg-h.jpg);
+	background-repeat: no-repeat;
+	background-position: 0 15%;
+	&-container {
+		max-width: 1050px;
+		min-width: 700px;
+		margin: 0 auto;
+	}
+}
+.form-block {
+	float: left;
+	width: 25%;
 
+	vertical-align: top;
+	color: #fff;
+
+	&-title {
+		margin-bottom: 20px;
+		font-size: 16px;
+		line-height: 20px;
+		font-weight: bold;
+	}
+	& input {
+		display: none;
+
+	}
+	&-item {
+		position: relative;
+		display: block;
+
+		padding: 10px 0;
+		padding-left: 30px;
+
+		line-height: 20px;
+		cursor: pointer;
+
+		&:hover {
+			color: #fff;
+		}
+
+		&:before {
+			position: absolute;
+			left: 0;
+
+			font-family: 'symbols-sedona';
+			font-size: 28px;
+			color: #b5b5b5;
+			text-align: center;
+		}
+
+		&:hover::before {
+			color: #fff;
+		}
+	}
+}
+.form-block input[type="checkbox"] + .form-block-item::before {
+	content: '\2610';
+}
+.form-block input[type="checkbox"]:checked + .form-block-item::before {
+	content: '\2611';
+}
+.form-block input:disabled + .form-block-item::before {
+	color: #6a6a6a;
+}
+
+.range-block {
+	float: right;
+	width: 40%;
+	color: #fff;
+
+}
+.range-filter {
+	width: 100%;
+
+}
+
+.range-controls {
+	position: relative;
+
+	height: 80px;
+	margin-bottom: 15px;
+	padding: 0;
+
+	overflow: hidden;
+	& .scale {
+		height: 2px;
+		margin-top: 39px;
+
+		background: #918381;
+	}
+	& .bar {
+		height: 2px;
+		background: #f2f2f2;
+	}
+	& .toggle {
+		position: absolute;
+		top: 30px;
+		left: 0;
+
+		width: 4px;
+		height: 4px;
+		border: 8px solid #fff;
+
+		background: #ababab;
+		border-radius: 50%;
+
+		cursor: pointer;
+		&:hover {
+			background: #1c4f80;
+		}
+	}
+	& .max-toggle {
+		left: 70%;
+	}
+}
+.price-controls {
+	width: auto;
+	min-width: 246px;
+	border: 2px solid #fff;
+	border-radius: 3px;
+	color: #fff;
+}
+.min-price,
+.max-price {
+	display: inline-block;
+	width: 45%;
+	padding: 5px 0;
+	vertical-align: text-top;
+	text-align: center;
+
+}
+.min-price {
+	margin-right: 5%;
+	padding-left: 20px;
+}
+.max-price input,
+.min-price input {
+	width: 80px;
+	margin:0;
+	border: none;
+	background: none;
+	color: #fff;
+	font-size: 16px;
+	font-family: "PT Sans", "Arial", sans-serif;
+	font-weight: 300;
+	font-style: normal;
+	text-align: left;
+
+}
+.price-controls:before {
+	content: '';
+	position: relative;
+	top: 6px;
+	left: 50%;
+	width: 1px;
+	height: 55px;
+	border-right: 2px solid #fff ;
+}
+.price-controls {
+	& .min-price {
+		margin-right: 2px;
+	}
+}
+.btn-wrapper {
+	width: auto;
+	text-align: center;
+}
+.show-options {
+	margin: 0 auto;
+	padding: 10px 20px;
+	border: 2px solid #fff;
+	border-radius: 3px;
+	background: none;
+	text-align: center;
+	font-size: 14px;
+	text-transform: uppercase;
+
+}
 /*End Options-block*/
 /*Gallery*/
 .gallery {
 	margin-bottom: 120px;
 }
+/*Gallery Sort*/
+
+.gallery-item {
+	min-width: 738px;
+	max-width: 1140px;
+	border-bottom: 1px solid #e5e5e5;
+	padding: 30px;
+
+	&-container {
+		max-width: 1050px;
+		min-width:706px;
+		margin: 0 auto;
+
+	}
+}
+.sort {
+	&-options {
+		width: 100%;
+	}
+	&-found{
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 20px;
+		font-weight: bold;
+		margin-right: 50px;
+	}
+	&-types {
+		float: left;
+	}
+
+	&-title{
+		display: inline-block;
+
+		font-size: 12px;
+		font-weight: normal;
+		line-height: 18px;
+		text-transform: uppercase;
+	}
+	&-type {
+		position: relative;
+		display: inline-block;
+		vertical-align: baseline;
+
+		margin-left: 15px;
+		padding: 15px;
+		font-size: 12px;
+		text-transform: uppercase;
+		opacity: .3;
+
+		&:before {
+			content: "";
+
+			position: absolute;
+			bottom: 12px;
+			left: 15px;
+			right: 15px;
+
+			border-bottom: 1px dotted @btn-blue;
+			opacity: 1;
+		}
+		&:hover{
+			color: @btn-blue;
+			opacity: 1;
+		}
+		&:active {
+			opacity: 1;
+			color: #000;
+		}
+		&:hover:before{
+			border-bottom: 1px dotted @btn-blue;
+		}
+		&:active:before{
+			border-bottom: none;
+		}
+	}
+	&-to {
+		float: right;
+		margin-top: 10px;
+	}
+}
+
+.icon-down-dir:before {
+	content: '\25bc';
+	width: 10px;
+	line-height: 20px;
+	font-size: 23px;
+	opacity: .3;
+} /* '▼' */
+
+.icon-up-dir:before {
+	content: '\25b2';
+	width: 10px;
+	line-height: 20px;
+	font-size: 23px;
+	opacity: .3;
+} /* '▲' */
+
+
+.icon-up-dir:active:before,
+.icon-down-dir:active:before{
+	color: #000;
+	opacity: 1;
+}
+
+.sort-to .dir-active:before{
+	opacity: 1;
+	color: @btn-blue;
+}
+/*Galery items*/
+
 .gallery-item {
 	min-width: 738px;
 	max-width: 1140px;
@@ -707,12 +996,15 @@ h2 {
 
 	&-features {
 		float: left;
-		width: 70%;
+		width: 80%;
 	}
 
 	&-image {
 		display: inline-block;
+		width: 135px;
+		height: 90px;
 		vertical-align: top;
+		margin-right: 30px;
 
 		& img {
 			width: 135px;
@@ -721,8 +1013,8 @@ h2 {
 	}
 	&-descr {
 		display: inline-block;
+		width: 70%;
 		vertical-align: top;
-		margin-left: 30px;
 		& h2 {
 			font-size: 20px;
 			line-height: 20px;
@@ -731,21 +1023,59 @@ h2 {
 
 		}
 		& a {
+			font-size: 14px;
 			display: inline-block;
-
+			line-height: 20px;
+			padding: 4px 17px;
 		}
 	}
+	&-book {
+		background-color: @btn-brown;
+		&:hover {
+			background-color: @btn-brown-hover;
+		}
+		&:active {
+			background-color: @btn-brown-active;
+		}
+	}
+
 	&-type,
 	&-minprice{
 		display: inline-block;
-		width: 110px;
+		width: 111px;
 		vertical-align: bottom;
+		font-size: 14px;
+		line-height: 20px;
+		margin: 11px 0px;
 
 	}
 
 	&-rating {
 		float: right;
-		width: 20%;
+		width: 110px;
+		& .rating-stars {
+			line-height: 19px;
+			font-size: 0;
+			width: 110px;
+			vertical-align: top;
+			text-align: right;
+		}
+		& .icon-star {
+			margin-right: -3px;
+			font-size: 19px;
+			line-height: 19px;
+			color: #81b3d2;
+		}
+		& .rating-index {
+			width: 110px;
+			text-align: center;
+			padding: 10px 0;
+			margin-top: 38px;
+			line-height: 0.5;
+			font-size: 14px;
+
+			background-color: #f2f2f2;
+		}
 
 	}
 }
